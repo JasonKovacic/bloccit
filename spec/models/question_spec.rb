@@ -9,7 +9,7 @@ RSpec.describe Question, type: :model do
         end
 
         it "should respond to body" do
-            expect(question)to respond_to(:body)
+            expect(question).to respond_to(:body)
         end
 
         it "should respond to resolved" do
