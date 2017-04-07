@@ -49,14 +49,14 @@ class PostsController < ApplicationController
    end
 
    def destroy
-      @post = Post.find(params[:id])
+      @post = Question.find(params[:id])
 
     # #8
-      if @post.destroy
-        flash[:notice] = "\"#{@post.title}\" was deleted successfully."
-        redirect_to posts_path
+      if @question.destroy
+        flash[:notice] = "\"#{@question.title}\" was deleted successfully."
+        redirect_to questions_path
       else
-        flash.now[:alert] = "There was an error deleting the post."
+        flash[:error] = "There was an error deleting the question."
         render :show
       end
     end

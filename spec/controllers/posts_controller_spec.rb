@@ -113,24 +113,24 @@ describe "PUT update" do
       #
 
       describe "DELETE destroy" do
-            it "deletes the post" do
-              delete :destroy, {id: my_post.id}
+            it "deletes the question" do
+              delete :destroy, {id: my_question.id}
         # #6
-              count = Post.where({id: my_post.id}).size
+              count = Post.where({id: my_question.id}).size
               expect(count).to eq 0
             end
 
-            it "redirects to posts index" do
-              delete :destroy, {id: my_post.id}
+            it "redirects to questions index" do
+              delete :destroy, {id: my_question.id}
         # #7
-              expect(response).to redirect_to posts_path
+              expect(response).to redirect_to questions_path
             end
           end
 
-    #   it "assigns [my_post] to @posts" do
-    #          get :index
-    #          expect(assigns(:posts)).to eq([my_post])
-    #        end
+      it "assigns [my_post] to @posts" do
+             get :index
+             expect(assigns(:posts)).to eq([my_post])
+           end
 
 
 
