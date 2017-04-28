@@ -6,4 +6,7 @@ end
     get 'about' => 'welcome#about'
     root 'welcome#index'
 
+    resources :users, only: [:new, :create]
+
+
 end
