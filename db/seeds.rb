@@ -35,10 +35,15 @@ posts = Post.all
 # #4
     post: posts.sample,
     body: RandomData.random_paragraph
+    # name: RandomData.random_name
+    # email: RandomData.random_email
   )
 end
+
+
 
 puts "Seed finished"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+put
